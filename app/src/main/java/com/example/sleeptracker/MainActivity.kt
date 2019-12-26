@@ -1,5 +1,6 @@
 package com.example.sleeptracker
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
@@ -25,7 +26,11 @@ class MainActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int,
                                   resultCode: Int,
                                   data: Intent?) {
+        if(requestCode == REQUEST_CODE){
+            if(resultCode == Activity.RESULT_OK){
 
+            }
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -42,5 +47,9 @@ class MainActivity : AppCompatActivity() {
             R.id.action_settings -> true
             else -> super.onOptionsItemSelected(item)
         }
+    }
+
+    companion object{
+        const val REQUEST_CODE = 1
     }
 }

@@ -1,5 +1,6 @@
 package com.example.sleeptracker
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,7 +13,7 @@ class SleepAdapter internal constructor(context: Context)
     private val inflater: LayoutInflater = LayoutInflater.from(context)
     private var sleeps = emptyList<Sleep>() // Cached copy of words
 
-    inner class SleepHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class SleepViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val textViewQualityValue: TextView = itemView.findViewById(R.id.textViewQualityValue)
         val textViewStart: TextView = itemView.findViewById(R.id.textViewStart)
         val textViewEnd: TextView = itemView.findViewById(R.id.textViewEnd)
