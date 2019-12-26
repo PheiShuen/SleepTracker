@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddActivity">
+
+    <ImageView
+        android:id="@+id/imageViewVeryDissatisfied"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewDIssatisfied"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewDIssatisfied"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageViewDIssatisfied"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_sentiment_very_dissatisfied_black_24dp" />
+
+    <ImageView
+        android:id="@+id/imageViewDIssatisfied"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewNeutral"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewNeutral"
+        app:layout_constraintHorizontal_bias="0.181"
+        app:layout_constraintStart_toEndOf="@+id/imageViewVeryDissatisfied"
+        app:layout_constraintTop_toTopOf="@+id/imageViewNeutral"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_sentiment_dissatisfied_black_24dp" />
+
+    <ImageView
+        android:id="@+id/imageViewNeutral"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewSatisfied"
+        app:layout_constraintStart_toEndOf="@+id/imageViewDIssatisfied"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.374"
+        app:srcCompat="@drawable/ic_sentiment_neutral_black_24dp" />
+
+    <ImageView
+        android:id="@+id/imageViewSatisfied"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewVerySatisfied"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewVerySatisfied"
+        app:layout_constraintHorizontal_bias="0.531"
+        app:layout_constraintStart_toEndOf="@+id/imageViewNeutral"
+        app:layout_constraintTop_toTopOf="@+id/imageViewVerySatisfied"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_sentiment_satisfied_black_24dp" />
+
+    <ImageView
+        android:id="@+id/imageViewVerySatisfied"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="256dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
+        android:layout_marginBottom="427dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageViewSatisfied"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_sentiment_very_satisfied_black_24dp" />
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="@string/save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewQuality"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="184dp"
+        android:layout_marginLeft="184dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="184dp"
+        android:layout_marginRight="184dp"
+        android:layout_marginBottom="320dp"
+        android:text="@string/quality"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSave"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewNeutral" />
+</androidx.constraintlayout.widget.ConstraintLayout>

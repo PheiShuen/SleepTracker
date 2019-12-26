@@ -9,13 +9,13 @@ interface  SleepDao{
     suspend fun insertSleep(sleep: Sleep)
 
     @Query("SELECT * FROM sleep")
-    suspend fun getSleep() : LiveData<List<Sleep>> //return u a list record
+     fun getSleep() : LiveData<List<Sleep>> //return u a list record
 
     @Query("SELECT * FROM sleep WHERE id=:sleep_id")
-    suspend fun getASleep(sleep_id: Int)
+     fun getASleep(sleep_id: Int): Sleep //: Sleep = return sleep
 
     @Update
-    suspend fun updateSleep(sleep: Sleep)
+    suspend fun updateSleep(sleep: Sleep) //suspend means run in background not UI
 
     @Delete
     suspend fun deleteSleep(sleep: Sleep)
