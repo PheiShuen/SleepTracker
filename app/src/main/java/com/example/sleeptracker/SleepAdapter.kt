@@ -26,13 +26,21 @@ class SleepAdapter internal constructor(context: Context)
 
     override fun onBindViewHolder(holder: SleepViewHolder, position: Int) {
         val sleepRec = sleeps[position]
-        holder.textViewQualityValue.text = sleepRec.quality.toString()
-        holder.textViewStart.text = SimpleDateFormat("yyyy,MM,dd.HH:MM").format(sleepRec.startDate.toString())
-        holder.textViewEnd.text = SimpleDateFormat("yyyy,MM,dd.HH:MM").format(sleepRec.endDate.toString())
+        holder.textViewQualityValue.text =
+            sleepRec.quality.toString()
+        holder.textViewStart.text =
+            SimpleDateFormat("yyyy,MM,dd.HH:MM").format(sleepRec.startDate)
+        holder.textViewEnd.text =
+            SimpleDateFormat("yyyy,MM,dd.HH:MM").format(sleepRec.endDate)
     }
 
     override fun getItemCount(): Int {
         return sleeps.size
+    }
+
+    fun setSleep(sleeps: List<Sleep>){
+        this.sleeps = sleeps
+        notifyDataSetChanged()
     }
 
 }
